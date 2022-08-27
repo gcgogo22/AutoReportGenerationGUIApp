@@ -13,7 +13,7 @@ To help the data analysis process, I have designed and implemented the auto-repo
 2. UI:
 ![User Interface](./img/UI.PNG "User interface")
 3. Operation steps: 
-*** Step1:
+* Step1:
 ![Step1](./img/step1.PNG "Step1")
 
 * Step2: 

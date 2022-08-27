@@ -1,0 +1,1065 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="ProgId" content="Word.Document">
+<meta name="Generator" content="Microsoft Word 12">
+<meta name="Originator" content="Microsoft Word 12">
+<link rel="File-List" href="readme_files/filelist.xml">
+
+
+<title>PixeLINK's MATLAB Image Acquisition Toolkit Adaptor</title><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Joel MacKinnon</o:Author>
+  <o:LastAuthor>Dmytro Liashenko</o:LastAuthor>
+  <o:Revision>6</o:Revision>
+  <o:TotalTime>220</o:TotalTime>
+  <o:Created>2013-12-19T13:55:00Z</o:Created>
+  <o:LastSaved>2016-01-24T15:39:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>1281</o:Words>
+  <o:Characters>7303</o:Characters>
+  <o:Lines>60</o:Lines>
+  <o:Paragraphs>17</o:Paragraphs>
+  <o:CharactersWithSpaces>8567</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+ <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+ </o:OfficeDocumentSettings>
+</xml><![endif]--><link rel="themeData" href="readme_files/themedata.thmx">
+<link rel="colorSchemeMapping" href="readme_files/colorschememapping.xml"><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>125</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="--"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="true"
+  DefSemiHidden="true" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="267">
+  <w:LsdException Locked="false" Priority="0" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" Name="toc 9"/>
+  <w:LsdException Locked="false" Priority="35" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" Priority="10" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" Priority="11" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" Priority="22" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="59" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Table Grid"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" UnhideWhenUsed="false" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" SemiHidden="false"
+   UnhideWhenUsed="false" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" SemiHidden="false"
+   UnhideWhenUsed="false" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:modern;
+	mso-font-pitch:fixed;
+	mso-font-signature:-520092929 1073806591 9 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+h3
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 3 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+code
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	font-family:"Courier New";
+	mso-ascii-font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:"Courier New";
+	mso-bidi-font-family:"Courier New";}
+pre
+	{mso-style-priority:99;
+	mso-style-link:"HTML Preformatted Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Heading3Char
+	{mso-style-name:"Heading 3 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 3";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.HTMLPreformattedChar
+	{mso-style-name:"HTML Preformatted Char";
+	mso-style-priority:99;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"HTML Preformatted";
+	font-family:Consolas;
+	mso-ascii-font-family:Consolas;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	mso-hansi-font-family:Consolas;
+	mso-bidi-font-family:Consolas;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:250242415;
+	mso-list-template-ids:950986942;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:482894011;
+	mso-list-template-ids:1048498832;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:831989048;
+	mso-list-template-ids:-437349152;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:854227802;
+	mso-list-template-ids:345145666;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4
+	{mso-list-id:1112213556;
+	mso-list-template-ids:-437349152;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l5
+	{mso-list-id:1406151175;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-160763940 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]--></head>
+<body style="" lang="EN-US">
+
+<div class="Section1">
+
+<h1 style="text-align: center;" align="center"><span class="SpellE"><span style="">PixeLINK's</span></span><span style=""> MATLAB Image Acquisition
+Toolkit Adaptor<o:p></o:p></span></h1>
+
+<table class="MsoNormalTable" style="width: 80%;" align="left" border="0" cellpadding="0" width="80%">
+ <tbody><tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Installation<o:p></o:p></span></h2>
+  <p class="MsoNormal" style=""><span style="">The
+  PixeLINK <span class="SpellE">MATLAB</span> adaptor has a few assumptions: <o:p></o:p></span></p>
+  <ul type="disc">
+   <li class="MsoNormal" style=""><span style="">PixeLINK drivers and
+       API have already been installed, v9 or higher is required.<o:p></o:p></span></li>
+   <li class="MsoNormal" style=""><span style="">MATLAB has already
+       been installed<o:p></o:p></span></li>
+   <li class="MsoNormal" style=""><span style="">The MATLAB Image Acquisition
+       Toolkit has already been installed<o:p></o:p></span></li>
+  </ul>
+  <p class="MsoNormal" style=""><b><span style="">NOTE:
+  The PixeLINK MATLAB R2017b adaptor has been tested with MATLAB R2017b.</span></b></p>
+  <p class="MsoNormal" style=""><span style=""><b>NOTE:
+  MATLAB R2015b is the last version of MATLAB that supports 32-bit operating 
+  systems. All later releases are 64-bit only.</b><br>
+  <br>
+  To install the MATLAB adaptor, simply copy the following files in the
+  PixeLINK MATLAB directory<o:p></o:p></span></p>
+  <p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal" style=""><span style="">For
+  32 Bit-<span class="SpellE">OS:</span><o:p></o:p></span></p>
+  <ul type="disc">
+    <li class="MsoNormal" style=""><span style="">
+       C:\Program Files (x86)\PixeLINK\Matlab\Win32\ pixelinkimaq.dll and pixelinkimaq.imdf<o:p></o:p></span></li>
+    <li class="MsoNormal" style=""><span style="">
+       To the MATLAB directory %<span class="SpellE">ProgramFiles</span>%\MATLAB\<i>&lt;<span class="SpellE">Matlab</span> 
+       Version&gt;</i>\toolbox\<span class="SpellE">imaq</span>\<span class="SpellE">imaqadaptors.</span>
+       <o:p></o:p></span></li>
+   </ul>
+  <p class="MsoNormal"><span style=""><o:p>&nbsp;</o:p></span></p>
+  <p class="MsoNormal"><span style="">For
+  64 Bit-OS:<o:p></o:p></span></p>
+  <ul type="disc">
+    <li class="MsoNormal" style=""><span style="">C:\Program Files (x86)\
+       PixeLINK\Matlab\Win64\ pixelinkimaq.dll and pixelinkimaq.imdf<o:p></o:p></span></li>
+    <li class="MsoNormal" style=""><span style="">
+       To the MATLAB directory %<span class="SpellE">ProgramFiles</span>%\MATLAB\<i>&lt;<span class="SpellE">Matlab</span> 
+       Version&gt;</i>\toolbox\<span class="SpellE">imaq</span>\<span class="SpellE">imaqadaptors.</span>
+       <o:p></o:p></span></li>
+   </ul>
+  <p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+  <h3 style=""><span style="">Example<o:p></o:p></span></h3>
+  <p class="MsoNormal" style=""><span style="">For
+  MATLAB 2017b 64-bit, copy the above-mentioned files from<o:p></o:p></span></p>
+  <pre style="">C:\Program Files (x86)\PixeLINK\Matlab\Win64</pre>
+  <p class="MsoNormal" style=""><span style="">to
+  <o:p></o:p></span></p>
+  <pre style="">C:\Program Files\MATLAB\R2017b\toolbox\<span class="SpellE">imaq</span>\<span class="SpellE">imaqadaptors</span></pre>
+  <p class="MsoNormal" style=""><span style=""><o:p>&nbsp;</o:p></span></p>
+  <h2 style=""><span style="">Registering
+  the PixeLINK Adaptor in MATLAB<o:p></o:p></span></h2>
+  <p class="MsoNormal" style=""><span style="">This
+  only has to be done once. Once the <span class="SpellE">dll</span> is
+  registered, MATLAB will know about it. <o:p></o:p></span></p>
+  <pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal"><span style="">For
+  32 Bit-OS:<o:p></o:p></span></p>
+  <pre style="">&gt;&gt; <span class="SpellE">imaqregister</span>([<span class="SpellE">'C:\Program Files\MATLAB\R2017b\</span>toolbox\<span class="SpellE">imaq</span>\<span class="SpellE">imaqadaptors</span>\pixelinkimaq.dll'])</pre><pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal"><span style="">For
+  64 Bit-OS:<o:p></o:p></span></p>
+  <pre>&gt;&gt; <span class="SpellE">imaqregister</span>([<span class="SpellE">'C:\Program Files\MATLAB\R2017b\</span>toolbox\<span class="SpellE">imaq</span>\<span class="SpellE">imaqadaptors</span>\pixelinkimaq.dll'])</pre>
+  <pre style=""><o:p>&nbsp;</o:p></pre>
+  <pre style=""><span class="SpellE">ans</span> = </pre>
+  <pre style=""><o:p>&nbsp;</o:p></pre>
+  <pre style=""><span style="">&nbsp;&nbsp; </span>cell</pre>
+  <pre style=""><o:p>&nbsp;</o:p></pre>
+  <pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">'C:\Program Files\MATLAB\R2017b\toolbox\imaq\pixelinkimaq.dll'</span></pre>
+  <pre style=""><o:p>&nbsp;</o:p></pre>  
+  <pre style="">&gt;&gt; <span class="SpellE">imaqreset</span></pre><pre style="">&gt;&gt; <span class="SpellE">imaqhwinfo</span></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">InstalledAdaptors</span>: {'<span class="SpellE">gentl</span>'<span style="">&nbsp; </span>'<span class="SpellE">gige</span>' '<span class="SpellE">pixelinkimaq</span>'<span style="">&nbsp; </span>'<span class="SpellE">winvideo</span>'}</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">MATLABVersion</span>: '9.3 (R2017b)'</pre>
+  <pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ToolboxName</span>: 'Image Acquisition Toolbox'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ToolboxVersion</span>: '5.3 (R2017b)'</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Querying
+  Available Cameras<o:p></o:p></span></h2>
+  <p class="MsoNormal" style=""><span style="">You
+  can get more information about cameras available by using </span><span class="SpellE"><code><span style="font-size: 10pt;">imaqhwinfo</span></code></span><span style="">.<o:p></o:p></span></p>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; dev=<span class="SpellE">imaqhwinfo</span>('<span class="SpellE">pixelinkimaq</span>')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">dev = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">AdaptorDllName</span>: 'C:\Program Files (x86)\MATLAB\R2017b\toolbox\imaq\imaqadaptors\winXX\pixelinkimaq.dll'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">AdaptorDllVersion</span>: '5.1 (R2017b)'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">AdaptorName</span>: '<span class="SpellE">pixelinkimaq</span>'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceIDs</span>: {[1]}</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceInfo</span>: [1x1 <span class="SpellE">struct</span>]</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">dev.DeviceInfo</span>(1)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DefaultFormat</span>: 'MONO8_1280x1024'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceFileSupported</span>: 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceName</span>: 'PixeLINK PL-C721MU-BL 721000007'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceID</span>: 1</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">VideoInputConstructor</span>: '<span class="SpellE">videoinput</span>('<span class="SpellE">pixelinkimaq</span>', 1)'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">VideoDeviceConstructor</span>: '<span class="SpellE">imaq.VideoDevice</span>('<span class="SpellE">pixelinkimaq</span>', 1)'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SupportedFormats</span>: {'MONO16_1280x1024'<span style="">&nbsp; </span>'MONO8_1280x1024'}</pre><pre style=""><span style="font-size: 12pt;"><o:p>&nbsp;</o:p></span></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Connecting
+  to a Camera Using Defaults<o:p></o:p></span></h2>
+  <p class="MsoNormal" style=""><span style="">To
+  connect to the default camera using default settings: <o:p></o:p></span></p>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">vid</span>=<span class="SpellE">videoinput</span>('<span class="SpellE">pixelinkimaq</span>')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">Summary of Video Input Object Using 'PixeLINK PL-C721MU-BL 721000007'.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp; </span>Acquisition Source(s):<span style="">&nbsp; </span>input1 is available.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp; </span>Acquisition Parameters:<span style="">&nbsp; </span>'input1' is the current selected source.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10 frames per trigger using the selected source.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>'MONO8_1280x1024' video data to be logged upon START.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Grabbing first of every 1 frame(s).</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Log data to 'memory' on trigger.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Trigger Parameters:<span style="">&nbsp; </span>1 'immediate' trigger(s) on START.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status:<span style="">&nbsp; </span>Waiting for START.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0 frames acquired since starting.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0 frames available for GETDATA.</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Connecting
+  to a Specific Camera With A Specific Format<o:p></o:p></span></h2>
+  <pre style="">&gt;&gt; <span class="SpellE">vid</span>=<span class="SpellE">videoinput</span>('<span class="SpellE">pixelinkimaq</span>', 1, 'MONO16_1280x1024')</pre><pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal"><span style="">You
+  may also need to set the <span class="SpellE">ReturnedColorSpace</span> video
+  object property depending on </span>the camera model in use. </p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Starting
+  and Stopping Previewing<o:p></o:p></span></h2>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; preview(vid)</pre><pre style="">&gt;&gt; <span class="SpellE">closepreview</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Displaying
+  Camera Properties<o:p></o:p></span></h2>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">src</span>=<span class="SpellE">getselectedsource</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Display Summary for Video Source Object:</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>General Settings:</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Parent = [1x1 <span class="SpellE">videoinput</span>]</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Selected = on</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">SourceName</span> = input1</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Tag = [0x0 string]</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Type = <span class="SpellE">videosource</span></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Device Specific Properties:</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">CameraName</span> = PixeLINK PL-C721MU-BL</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">CameraSerialNumber</span> = 721000007</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Exposure = 30</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ExposureMode</span> = manual</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FlipHorizontal</span> = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FlipVertical</span> = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FrameRate</span> = 19.9993</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">FrameRateMode</span> = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gain = 0.00</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gamma = 2.2</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">GammaMode</span> = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Enabled = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Mode = strobe</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Parameter1 = 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Parameter2 = 1e-05</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Parameter3 = 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo1Polarity = positive</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Enabled = off</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Mode = strobe</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Parameter1 = 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Parameter2 = 1e-05</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Parameter3 = 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Gpo2Polarity = positive</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">PixelAddressingMode</span> = average</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">PixelAddressingValue</span> = 1</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerDelay</span> = 0</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerParameter</span> = 1</pre><pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal" style=""><span style="">The
+  command </span><code><span style="font-size: 10pt;">inspect</span></code><span style=""> can be very handy too. For
+  example: <o:p></o:p></span></p>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt;inspect(<span class="SpellE">src</span>)</pre><pre style="">&gt;&gt;inspect(vid)</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Examining
+  and Modifying a Camera Property<o:p></o:p></span></h2>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; get(<span class="SpellE">src</span>, 'Exposure')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span>40</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; set(<span class="SpellE">src</span>, 'Exposure', 50)</pre><pre style="">&gt;&gt; get(<span class="SpellE">src</span>, 'Exposure')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span>50</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; get (vid, 'ROI')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>1280<span style="">&nbsp;&nbsp; </span><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1024</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; set (vid, 'ROI', [0, 0, 100, 100])</pre><pre style="">&gt;&gt; get (vid, 'ROI')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>0<span style="">&nbsp;&nbsp; </span>100<span style="">&nbsp;&nbsp; </span>100</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Getting
+  Help For a Property<o:p></o:p></span></h2>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">imaqhelp</span>(<span class="SpellE">src</span>, 'Exposure')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span>EXPOSURE<span style="">&nbsp; </span>[0.050063<span style="">&nbsp; </span>2000]<span style="">&nbsp; </span>(Read-only: never)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;</span>The exposure time, in milliseconds.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span>The limits of this property depend upon the frame rate setting (when enabled).</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;</span>See also <span class="SpellE">ExposureMode</span>.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">imaqhelp</span>(<span class="SpellE">src</span>, '<span class="SpellE">WhiteBalanceGainRed</span>')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span>WHITEBALANCEGAINRED<span style="">&nbsp; </span>[0<span style="">&nbsp; </span>8]<span style="">&nbsp; </span>(Read-only: never)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">propinfo</span>(<span class="SpellE">src</span>, '<span class="SpellE">WhiteBalanceGainRed</span>')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Type: 'double'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Constraint: 'bounded'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ConstraintValue</span>: [0 8]</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DefaultValue</span>: 1</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">ReadOnly</span>: 'never'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">DeviceSpecific</span>: 1</pre><pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal" style="margin-bottom: 12pt;"><span style="">The best place for
+  information about a PixeLINK camera is the PixeLINK documentation.<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Getting
+  a Snapshot<o:p></o:p></span></h2>
+  <pre style="">&gt;&gt;frame=<span class="SpellE">getsnapshot</span>(<span class="SpellE">vid</span>);<br style="">
+  <!--[if !supportLineBreakNewLine]--><br style="">
+  <!--[endif]--></pre><pre style=""><span style="">&nbsp; </span></pre><pre style="">&gt;&gt;<span class="SpellE">imtool</span>(frame)</pre><pre style=""><o:p>&nbsp;</o:p></pre>
+  <p class="MsoNormal"><span class="SpellE"><span style="">Matlab</span></span><span style=""> image commands do not automatically scale UINT16
+  images.<span style="">&nbsp; </span>The solution is to scale
+  the data before displaying it. <o:p></o:p></span></p>
+  <p class="MsoNormal"><span style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span><o:p></o:p></span></p>
+  <p class="MsoNormal"><span style="">The
+  following scales 10-Bit data in order to be viewed with the </span><span class="SpellE"><code><span style="font-size: 10pt;">imagesc</span></code></span><span style="">, </span><code><span style="font-size: 10pt;">image</span></code><span style="">, </span><span class="SpellE"><code><span style="font-size: 10pt;">imshow</span></code></span><code><span style="font-size: 10pt;"> or <span class="SpellE">imtool</span></span></code><span style="">(recommended) commands: <o:p></o:p></span></p>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre>&gt;&gt; <span class="SpellE">ScaledDoubleFrame</span>=double(frame)/(2^10);</pre><pre style="">&gt;&gt; <span class="SpellE">imtool</span>(<span class="SpellE">ScaledDoubleFrame</span>)</pre>
+  <p class="MsoNormal" style=""><o:p>&nbsp;</o:p></p>
+  </td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Image
+  Acquisition Toolkit Help<o:p></o:p></span></h2>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">imaqhelp</span> <o:p></o:p></pre><function name=""></function><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">imaqhelp</span> <span class="SpellE">triggerconfig</span></pre><pre style=""> TRIGGERCONFIG Configure video input object trigger settings.</pre><pre style=""> </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>TRIGGERCONFIG(OBJ, TYPE) </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>TRIGGERCONFIG(OBJ, TYPE, CONDITION) </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>TRIGGERCONFIG(OBJ, TYPE, CONDITION, SOURCE) configures the </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="SpellE">TriggerType</span>, <span class="SpellE">TriggerCondition</span>, and <span class="SpellE">TriggerSource</span> properties of </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>video input object OBJ to the value specified by TYPE, CONDITION, </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>and SOURCE, respectively. </pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><i>...<o:p></o:p></i></pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h2 style=""><span style="">Triggers<o:p></o:p></span></h2>
+  <h3 style=""><span style="">Querying
+  supported triggers<o:p></o:p></span></h3>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">ti</span>=<span class="SpellE">triggerinfo</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ti</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">1x4 <span class="SpellE">struct</span> array with fields:</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">ti</span>(1)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span>: 'immediate'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span>: 'none'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span>: 'none'</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">ti</span>(2)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span>: 'manual'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span>: 'none'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span>: 'none'</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">ti</span>(3)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span>: 'hardware'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span>: '<span class="SpellE">fallingEdge</span>'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span>: '<span class="SpellE">externalHardwareTrigger</span>'</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">ti</span>(4)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span>: 'hardware'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span>: '<span class="SpellE">risingEdge</span>'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span>: '<span class="SpellE">externalHardwareTrigger</span>'</pre><pre style=""><o:p>&nbsp;</o:p></pre></td>
+ </tr>
+ <tr style="">
+  <td style="padding: 0.75pt;">
+  <h3 style=""><span style="">Configuring
+  to Use a Hardware Trigger<o:p></o:p></span></h3>
+  <pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">vid</span>=<span class="SpellE">videoinput</span>('<span class="SpellE">pixelinkimaq</span>')</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">Summary of Video Input Object Using 'PixeLINK PL-B952F 999952000'.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp; </span>Acquisition Source(s):<span style="">&nbsp; </span>input1 is available.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp; </span>Acquisition Parameters:<span style="">&nbsp; </span>'input1' is the current selected source.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>10 frames per trigger using the selected source.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>'RGB24_1024x768' video data to be logged upon START.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Grabbing first of every 1 frame(s).</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Log data to 'memory' on trigger.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Trigger Parameters:<span style="">&nbsp; </span>1 'immediate' trigger(s) on START.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Status:<span style="">&nbsp; </span>Waiting for START.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0 frames acquired since starting.</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>0 frames available for GETDATA.</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">triggerConfigs</span> = <span class="SpellE">triggerinfo</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">triggerConfigs</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">1x4 <span class="SpellE">struct</span> array with fields:</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span></pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">triggerConfigs</span>(3)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> = </pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerType</span>: 'hardware'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerCondition</span>: '<span class="SpellE">fallingEdge</span>'</pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="SpellE">TriggerSource</span>: '<span class="SpellE">externalHardwareTrigger</span>'</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">triggerconfig</span>(<span class="SpellE">vid</span>, <span class="SpellE">triggerConfigs</span>(3))</pre><pre style="">&gt;&gt; start(vid)</pre><pre style="">&gt;&gt; <span class="SpellE">isrunning</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>1</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; <span class="SpellE">islogging</span>(<span class="SpellE">vid</span>)</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span class="SpellE">ans</span> =</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style=""><span style="">&nbsp;&nbsp;&nbsp;&nbsp; </span>0</pre><pre style=""><o:p>&nbsp;</o:p></pre><pre style="">&gt;&gt; frame=<span class="SpellE">getsnapshot</span>(<span class="SpellE">vid</span>)<span style="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></pre>
+  <p class="MsoNormal" style="margin-bottom: 12pt;"><span style=""><br>
+  The call to </span><span class="SpellE"><code><span style="font-size: 10pt;">getsnapshot</span></code></span><span style=""> will block until a
+  hardware trigger is received by the camera.<br style="">
+  <!--[if !supportLineBreakNewLine]--><br style="">
+  <!--[endif]--><o:p></o:p></span></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal"><span style=""><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body></html>

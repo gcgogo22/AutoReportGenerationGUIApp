@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: pixelinkGrab - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\TMP\RSPE1B2.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib y:\soft95\matlab6\extern\lib\win32\microsoft\msvc60\libmx.lib y:\soft95\matlab6\extern\lib\win32\microsoft\msvc60\libmex.lib y:\software\framegrab\pixelink\api\pimmegaapi.lib /nologo /dll /incremental:no /pdb:"Release/plGrab.pdb" /machine:I386 /out:"Release/plGrab.dll" /implib:"Release/plGrab.lib" /export:mexFunction 
+.\Release\plError.obj
+.\Release\plGrab.obj
+.\Release\plGrab.res
+]
+Creating command line "link.exe @C:\TMP\RSPE1B2.TMP"
+<h3>Output Window</h3>
+Linking...
+   Creating library Release/plGrab.lib and object Release/plGrab.exp
+
+
+
+<h3>Results</h3>
+plGrab.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

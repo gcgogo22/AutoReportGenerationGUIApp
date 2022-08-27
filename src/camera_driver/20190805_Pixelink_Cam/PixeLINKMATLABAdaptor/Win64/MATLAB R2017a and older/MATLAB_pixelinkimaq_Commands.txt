@@ -1,0 +1,77 @@
+// Register Driver
+imaqregister(['C:\Program Files\MATLAB\R2017a\toolbox\imaq\imaqadaptors\pixelinkimaq.dll'], 'unregister')
+imaqregister(['C:\Program Files\MATLAB\R2017a\toolbox\imaq\imaqadaptors\pixelinkimaq.dll'])
+imaqreset
+imaqhwinfo
+dev=imaqhwinfo('pixelinkimaq')
+vid=videoinput('pixelinkimaq')
+src=getselectedsource(vid)
+get(src)
+inspect(src)
+
+
+
+frame=getsnapshot(vid);
+imtool(frame)
+image(frame)
+RGB64=double(frame)/1024;
+image(RGB64)
+
+vid=videoinput('pixelinkimaq', 1, 'MONO8_1280x1024')
+
+
+vid=videoinput('pixelinkimaq', 1, 'BAYER8_1920x1200')
+src=getselectedsource(vid)
+get(src)
+preview(vid)
+
+vid=videoinput('pixelinkimaq', 1, 'BAYER16_1920x1200')
+preview(vid)
+
+vid=videoinput('pixelinkimaq', 1, 'YUV422_1920x1200')
+
+preview(vid)
+
+// Cleanup
+closepreview(vid)
+imaqregister([matlabroot '\toolbox\imaq\imaqadaptors\pixelinkimaq.dll'],'unregister')
+
+//Displaying Camera Properties
+src=getselectedsource(vid)
+get(src)
+inspect(src)
+inspect(vid)
+get(src, 'Exposure')
+
+// Setting Values
+set(src, 'Exposure', 50)
+get(src, 'Exposure')
+get(src, 'FrameRate')
+get(src, 'ActualFrameRate')
+get (vid, 'ROI')
+set (vid, 'ROI', [0, 0, 100, 100])
+get (vid, 'ROI')
+
+// Help
+imaqhelp(src, 'WhiteBalanceGainRed')
+propinfo(src, 'WhiteBalanceGainRed')
+
+// Grabbing Frames
+frame=getsnapshot(vid)
+imagesc(frame)
+
+// Trigger
+imaqregister([matlabroot '\toolbox\imaq\imaqadaptors\pixelinkimaq.dll'])
+imaqreset
+imaqhwinfo
+dev=imaqhwinfo('pixelinkimaq')
+vid=videoinput('pixelinkimaq', 1, 'BAYER8_1920x1200')
+triggerConfigs = triggerinfo(vid)
+triggerconfig(vid, triggerConfigs(3))
+isrunning(vid)
+islogging(vid)
+start(vid)
+vid.FramesAcquired
+isrunning(vid)
+islogging(vid)
+frame=getsnapshot(vid);	

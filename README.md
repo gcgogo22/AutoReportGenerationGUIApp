@@ -1,5 +1,4 @@
-# Auto_Report_Generation_GUI_App
- Auto report generator
+# Auto Report Generation GUI App
 
 ## Motivation:
 
@@ -11,26 +10,26 @@ To help the data analysis process, I have designed and implemented the auto-repo
 ## User Interface and Instructions
 1. SQL database snapshots:
 ![SQL snapshots](./img/SQL_snapshots.PNG "SQL database snapshots")
-2. User interface:
+2. UI:
 ![User Interface](./img/UI.PNG "User interface")
 3. Operation steps: 
-..* Step1:
-..![Step1](./img/step1.PNG "Step1")
+*** Step1:
+![Step1](./img/step1.PNG "Step1")
 
-..* Step2: 
-..![Step2](./img/step2.PNG "Step2")
+* Step2: 
+![Step2](./img/step2.PNG "Step2")
 
-..* Step3:
-..![Step3](./img/step3.PNG "Step3")
+* Step3:
+![Step3](./img/step3.PNG "Step3")
 
-..* Step4: 
-..![Step4](./img/step4.PNG "Step4")
+* Step4: 
+![Step4](./img/step4.PNG "Step4")
 
-..* Step5: 
-..![Step5](./img/step5.PNG "Step5")
+* Step5: 
+![Step5](./img/step5.PNG "Step5")
 
-..* Step6: 
-..![Step6](./img/step6.PNG "Step6")
+* Step6: 
+![Step6](./img/step6.PNG "Step6")
 
-..* Step7: 
-..![Step7](./img/step7.PNG "Step7")
+* Step7: 
+![Step7](./img/step7.PNG "Step7")
